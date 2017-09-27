@@ -1,0 +1,44 @@
+@import "../mixins/button.styl"
+
+.standard-buttons
+  & h1
+    margin 4.52rem auto 3.2rem auto
+
+.standard-buttons__table
+  width 27.15rem
+  text-align center
+  border-collapse collapse
+  border-width 0
+  margin 0 auto 0 auto
+  & .standard-buttons__table_little
+    width 4.15rem
+    height 1.05rem
+    font-size 0.56rem
+  & button
+    button-appearance 6.4rem 1.62rem 0.67rem #ffffff
+    margin 0.69rem 0.75rem
+    font-family LatoBlack
+
+.standard-buttons__table
+  & button
+    &:nth-of-type(4n - 3)
+    &:nth-of-type(4n - 2)
+      background-color first-color
+      button-shadow 0.2rem first-border-color
+      &:hover
+        color first-color
+      &:active
+        background-color first-color
+        color #ffffff
+    &:nth-of-type(4n)//
+    &:nth-of-type(4n-1)
+      background-color second-color
+      button-shadow 0.2rem second-border-color
+      &:hover
+        color second-color
+      &:active
+        background-color second-color
+        color #ffffff
+
+
+

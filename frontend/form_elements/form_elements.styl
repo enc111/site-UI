@@ -1,0 +1,189 @@
+@import "../mixins/button.styl"
+@import "../mixins/input-appearance.styl"
+
+little-text()
+  display inline-block
+  text-transform uppercase
+  font-family LatoBlack
+  font-size 0.667rem
+  text-align center
+  color #ffffff
+  background transparent
+
+toggle-height = 1.389rem
+
+.form-elements h1
+  margin 2.94rem auto 2.67rem auto
+
+.form-elements h2
+  margin -0.2rem auto 1.72rem auto
+
+.form-elements h2:nth-of-type(2)
+  margin-top 2rem
+
+.form-elements > div
+  display inline-block
+  vertical-align top
+
+.form-elements__form
+  display inline-block
+  width 15.94rem
+  margin 0 5.389rem 0 auto
+  & textarea
+  & input[type='submit']
+    display block
+  & > div
+    margin 0
+    padding 0
+    text-align left
+
+[class^='form-elements__form_']
+  margin 0 0 0.66rem 0
+  vertical-align middle
+  border none
+  overflow hidden
+
+[class^='form-elements__form_']:not([type='submit'])
+  input-appearance input-text-color arrow-circle-color
+
+.form-elements__form input:not([type='submit'])
+  height 1.61rem
+  width 10.27rem
+  padding 0 0.667rem
+
+.form-elements__form_valid-msg
+  display none
+  width 3.94rem
+  height 1.61rem
+  padding 0
+
+.form-elements__form input:valid:focus + div.form-elements__form_valid-msg
+.form-elements__form input:invalid:not([type='submit']) + div.form-elements__form_valid-msg
+  display inline-block
+  margin-left 0.39rem
+  &:before
+    content ''
+    display inline-block
+    position absolute
+    width 0
+    height 0
+    border 0.23rem solid transparent
+    border-left none
+    margin 0.6rem auto auto -0.22rem
+  &:after
+    content ''
+    line-height 1.61rem
+    width 3.94rem
+    height 1.61rem
+    little-text()
+
+.form-elements__form input:valid:focus + div.form-elements__form_valid-msg
+  background first-color
+  &:before
+    border-right-color first-color
+  &:after
+    content 'Thanks!'
+
+.form-elements__form input:invalid:not([type='submit']) + div.form-elements__form_valid-msg
+  background second-color
+  &:before
+    border-right-color second-color
+  &:after
+    content 'Error'
+
+.form-elements__form_message
+  width 14.606rem//0.667
+  height 3.6rem
+  padding 0.52rem 0.667rem 0.667rem
+  resize none
+
+.form-elements__form_submit
+  button-appearance 6.4rem 1.65rem 0.67rem #ffffff first-color
+  button-shadow 0.2rem first-border-color
+  margin-bottom 0.3rem
+  margin-left auto
+  margin-right 0 !important
+
+ //toggles
+.form-elements > div:nth-of-type(2)
+  margin-right 4rem
+  margin-bottom 0
+
+.form-elements__toggles
+  height toggle-height
+  width 3.22rem
+  display inline-block
+  margin 0 0.89rem 0 0
+
+.form-elements__toggles label
+  display inline-block
+  width 3.22rem
+  height toggle-height
+  border-radius 1.72rem
+  background-color arrow-circle-color
+
+.form-elements__toggles label:before,
+.form-elements__toggles input[type='checkbox']:checked + label:after
+  content ''
+  display inline-block
+  margin 0
+  margin auto
+  line-height toggle-height
+  circle 1.056rem #ffffff
+  vertical-align middle
+
+.form-elements__toggles label:after,
+.form-elements__toggles input[type='checkbox']:checked + label:before
+  height toggle-height
+  little-text()
+  line-height toggle-height
+  margin 0
+  margin auto
+  vertical-align middle
+
+.form-elements__toggles input[type='checkbox']:checked + label
+  background-color first-color
+  vertical-align middle
+  line-height toggle-height
+  text-align center
+  &:before
+    margin-top -0.3rem
+    content 'on'
+    -webkit-transition: .4s;
+    transition: .4s;
+  &:after
+    margin-top -0.3rem
+    margin-left 0.389rem
+
+.form-elements__toggles label:before
+  margin-top -0.15rem
+  margin-right 0.389rem
+
+.form-elements__toggles label:after
+  margin-top -0.15rem
+  content 'off'
+  -webkit-transition: .4s;
+  transition: .4s;
+
+.form-elements__tick-boxes input[type='checkbox']
+.form-elements__toggles input[type='checkbox']
+  display none
+  height 0
+
+//tick boxes
+.form-elements__tick-boxes
+  display inline-block
+  margin-right 1.056rem
+
+.form-elements__tick-boxes label
+  display inline-block
+  circle 1.389rem arrow-circle-color
+  &:before
+    content '\2714'
+    font-size 0.8rem
+    color pie-text-color
+
+.form-elements__tick-boxes input[type='checkbox']:checked + label
+  background-color first-color
+  &:before
+    color #ffffff

@@ -1,0 +1,11 @@
+mixin percentages()
+    div.percentages
+        h1 Percentages / pie chart
+        include /../mixins/pie-chart
+        +pie-chart('percentages', 0)
+        +pie-chart('percentages', 38)
+        +pie-chart('percentages', 62)
+        +pie-chart('percentages', 89)
+        div.percentages_multi-pie-chart
+            div
+                canvas#multi

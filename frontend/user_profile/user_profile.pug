@@ -1,0 +1,7 @@
+include ../mixins/profile
+mixin user-profile()
+    div.user-profile
+        h1 User profile
+        +profile('John Smith', 'Ux designer')
+        br
+        +profile('Sarah Brown', 'Developer')

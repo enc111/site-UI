@@ -1,0 +1,13 @@
+mixin location()
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAnPmsPF4bWe51139-lFyZloRpLkmK0n-U&region=GB')
+    div.location
+        h1 Location
+        div.location_map#map
+        div.location__info
+            div
+                span Meet us!
+                span.location__info_address 1259  Cilifornia St <br> San Francisco, CA
+            div
+                input.location__info_return(type='button')
+                input(type='button')
+

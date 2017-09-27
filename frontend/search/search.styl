@@ -1,0 +1,76 @@
+@import "../mixins/input-appearance.styl"
+@import "../mixins/appearance1.styl"
+
+height-of-input=1.54rem
+
+.search
+  display inline-block
+  margin-right 2rem
+  text-align center
+  & h1
+    margin 3.5rem auto 1.1rem auto
+    word-spacing 0.028rem
+  & select
+  & input[type='search']
+    height height-of-input
+    width 15.906rem
+    padding 0 0.667rem
+    input-appearance-ph input-text-color
+  & input[type='search']
+    border none
+    overflow hidden
+    &:not(.search__form_not-found)
+      input-appearance input-text-color
+  & input[type='submit']
+    position absolute
+    top 0
+    right 0
+    background-color second-color
+    background-icon "search/search.svg" 40%
+    height height-of-input
+    width 1.89rem
+  & select
+    appearance1 none
+    background arrow-circle-color
+    border-radius 0.2rem
+
+.search__form
+  margin-bottom 0.93rem
+
+.search__form
+.search__dropdown-wrap
+  margin-left auto
+  margin-right auto
+  width 16rem
+  position relative
+  //margin-right 2rem
+
+.search__form_not-found
+  input-appearance #ffffff second-color
+
+.search input[type='submit']
+.search__dropdown-wrap:after
+  border-radius 0 0.2rem 0.2rem 0
+
+.search__dropdown-wrap:before
+.search__dropdown-wrap:after
+  content ''
+  display inline-block
+  pointer-events none //for clicable
+  position absolute
+
+.search__dropdown-wrap:after
+  top 0
+  right 0
+  background first-color
+  height height-of-input
+  width 1.89rem
+  z-index 1
+
+.search__dropdown-wrap:before
+  top 20%
+  right 4%
+  width 0.35rem
+  height 0.35rem
+  arrow 0.15rem -135deg 0
+  z-index 999

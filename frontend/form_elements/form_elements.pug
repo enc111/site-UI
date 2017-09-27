@@ -1,0 +1,29 @@
+mixin form-elements()
+    div.form-elements
+        h1 Form elements
+        div
+            form.form-elements__form(action='' method='')
+                div
+                    input.form-elements__form_name(type='text' placeholder='Your Name')
+                    div.form-elements__form_valid-msg
+                div
+                    input.form-elements__form_email(type='email' placeholder='Your Email')
+                    div.form-elements__form_valid-msg
+                textarea.form-elements__form_message(rows='4' placeholder='Your Message')
+                input.form-elements__form_submit(type='submit' value='Submit')
+        div
+            h2 Toggles
+            div.form-elements__toggles
+                input#toggle1(type='checkbox')
+                label(for='toggle1')
+            div.form-elements__toggles
+                input#toggle2(type='checkbox')
+                label(for='toggle2')
+
+            h2 Tick boxes
+            div.form-elements__tick-boxes
+                input#tick-box1(type='checkbox')
+                label(for='tick-box1')
+            div.form-elements__tick-boxes
+                input#tick-box2(type='checkbox')
+                label(for='tick-box2')
