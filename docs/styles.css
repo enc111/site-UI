@@ -199,6 +199,16 @@ ul.progressbar li.done:before, ul.progressbar li.done:after {
     margin-right: auto !important;
   }
 }
+* {
+  max-width: 100%;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+*:focus {
+  outline: none;
+}
 body {
   margin: 0 auto;
   text-align: center;
@@ -206,15 +216,6 @@ body {
 }
 body > div:last-of-type {
   padding-bottom: 6.056rem;
-}
-* {
-  max-width: 100%;
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-*:focus {
-  outline: none;
 }
 h1,
 h2 {
@@ -1599,6 +1600,31 @@ input[type=range]::-ms-tooltip {
   width: 33rem;
   height: 18.72rem;
   border-radius: 0.2rem;
+}
+header {
+  background: linear-gradient(to right, #e75735 50%, #4eb7a8 50%);
+}
+header h1 {
+  color: #fff;
+  font-size: 5rem;
+  text-shadow: 1px 1px 2px #000, 1px 1px 4px #fff;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+header p {
+  font-family: sans-serif;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  word-spacing: 0.23rem;
+  text-transform: uppercase;
+  letter-spacing: 0.057rem;
+  text-shadow: 1px 1px 2px #000, 1px 1px 4px #fff;
+}
+nav a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  text-decoration: none;
 }
 @-moz-keyframes ripple-animation {
   from {

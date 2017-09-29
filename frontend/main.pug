@@ -1,6 +1,7 @@
 doctype html
 head
-    title FlatUI
+    meta(charset="UTF-8")
+    title Multilang
 body
     include standard_buttons/standard_buttons
     include arrow_buttons/arrow_buttons
@@ -16,3 +17,9 @@ body
     include messaging/messaging
     include video/video
     //+video("https://player.vimeo.com/video/62980495?color=e75735")
+    include header/header
+    +header('Multilang', 'Новый подход к изучению языков!')
+    include menu/menu
+    +menu()
+    main
+    footer

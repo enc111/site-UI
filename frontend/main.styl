@@ -118,13 +118,6 @@ background-icon(path, n = 60%)
       margin-left auto !important
       margin-right auto !important
 
-body//  width 38.89rem//  heigth 187.22rem
-  margin 0 auto
-  text-align center
-  font-family LatoBlack
-  & > div:last-of-type
-    padding-bottom 6.056rem
-
 *
   max-width 100%
   border none
@@ -132,6 +125,16 @@ body//  width 38.89rem//  heigth 187.22rem
   padding 0
   &:focus
     outline none
+  font-family sans-serif
+
+body//  width 38.89rem//  heigth 187.22rem
+  margin 0 auto
+  text-align center
+  font-family LatoBlack
+  & > div:last-of-type
+    padding-bottom 6.056rem
+
+
 
 h1,
 h2
@@ -172,5 +175,8 @@ h2
 @import "calendar/calendar"
 @import "messaging/messaging"
 @import "video/video"
+
+@import "header/header"
+@import "menu/menu"
 
 
