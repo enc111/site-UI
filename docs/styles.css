@@ -1604,7 +1604,11 @@ input[type=range]::-ms-tooltip {
 header {
   background: linear-gradient(to right, #e75735 50%, #4eb7a8 50%);
 }
-header h1 {
+header a {
+  text-decoration: none;
+}
+header a h1 {
+  display: inline;
   color: #fff;
   font-size: 5rem;
   text-shadow: 1px 1px 2px #000, 1px 1px 4px #fff;
@@ -1621,10 +1625,18 @@ header p {
   letter-spacing: 0.057rem;
   text-shadow: 1px 1px 2px #000, 1px 1px 4px #fff;
 }
+nav {
+  background: #e5e5e5;
+}
 nav a {
+  color: #4f4f4f;
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 0.7rem;
   text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+  text-shadow: 1px 1px 2px #fff, 1px 1px 3px #000;
 }
 @-moz-keyframes ripple-animation {
   from {
