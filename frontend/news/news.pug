@@ -1,0 +1,9 @@
+mixin news(htext, first_pic, hnews, datenews, textnews)
+    div.news
+        h1= htext
+        div.news__wrap
+            img(src=require('.'+first_pic))
+            div.news__wrap__text
+                h3= hnews
+                h4= datenews
+                p= textnews

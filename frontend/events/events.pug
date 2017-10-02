@@ -1,0 +1,10 @@
+mixin events(second_pic, dayNevents, mounthevents, hevents, textevents)
+        div.events__wrap
+            img(src=require('.'+second_pic))
+            div.events__wrap__text
+                h3
+                    span.events__wrap__text_big= dayNevents
+                    span= mounthevents
+                h4= hevents
+                p= textevents
+                button Add to calendar

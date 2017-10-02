@@ -1,7 +1,8 @@
 doctype html
 head
     meta(charset="UTF-8")
-    meta(name="keywords" content="иностранные языки, английский, испанский, немецкий, китайский, русский для иностранцев, multilang, языковые курсы")
+    meta(name="keywords" content="иностранные языки, английский, испанский, немецкий, китайский,  русский для иностранцев, multilang, языковые курсы")
+    meta(name="viewport" content="width=device-width; initial-scale=1.0")
     title Multilang
 body
     include standard_buttons/standard_buttons
@@ -12,7 +13,7 @@ body
     include form_elements/form_elements
     include search/search
     include user_profile/user_profile
-    include news_events/news_events
+    include news/news
     include location/location
     include calendar/calendar
     include messaging/messaging
@@ -23,4 +24,6 @@ body
     include menu/menu
     +menu('Виды занятий и стоимость', 'Запись и оплата', 'Полезная информация', 'Контакты', 'О нас')
     main
+        article
+            +news('Новости', "/news/first_ne.png", 'Открыт набор на курсы английского', '20 сентября 2017', 'Набор в группы для начинающий и продолжающих')
     footer
