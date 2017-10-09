@@ -1,3 +1,4 @@
+@import "../mixins/rectangle-wrapper.styl"
 .news
   & h1
     margin 5.1rem auto 1.78rem auto
@@ -6,23 +7,9 @@
     width 5.278rem
     height 11.78rem
     align left
-  & > div:not(:last-of-type)
-    margin-right 1rem
 
 .news__wrap
-.events__wrap
-  width 16rem
-  height 11.78rem
-  display inline-block
-  text-align left
-  border-radius 0.2rem
-  & p
-    font-family LatoRegular
-  & p
-  & h4
-    font-size 0.61rem
-
-.news__wrap
+  rectangle-wrapper 16rem 11.78rem 0.61rem
   background second-color
   & h3
     font-family LatoLight
@@ -37,13 +24,4 @@
     word-spacing 0.03rem
     letter-spacing 0.02rem
 
-.news__wrap__text
-.events__wrap__text
-  display inline-block
-  width 10.7rem
-  vertical-align top
-  color #ffffff
-  & h4
-    text-transform uppercase
-  & h3
-    font-weight normal
+
