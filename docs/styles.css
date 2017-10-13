@@ -132,12 +132,27 @@ ul.progressbar li.done:before, ul.progressbar li.done:after {
     width: 100%;
     font-size: 25px;
   }
+  article {
+    min-width: 70%;
+  }
+}
+@media only screen and (min-width: 1280px) and (max-width: 1679px) {
+  html {
+    width: 100%;
+    font-size: 23px;
+  }
+  article {
+    min-width: 70%;
+  }
 }
 @media only screen and (min-width: 700px) and (max-width: 1279px) {
   html {
     width: 100%;
     font-size: 18px;
     background: #adff2f;
+  }
+  article {
+    min-width: 60%;
   }
 }
 @media only screen and (min-width: 480px) and (max-width: 699px) {
@@ -221,6 +236,36 @@ body {
 body > div:last-of-type {
   padding-bottom: 6.056rem;
 }
+@media only screen and (min-width: 569px) {
+  main {
+    display: flex;
+    display: flexbox;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -moz-box-flex;
+    display: -webkit-flex;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+  }
+}
+aside {
+  background: #e0ffff;
+  margin-right: 0;
+  margin-left: auto;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+aside > div {
+  margin: 2rem auto;
+}
+article,
+aside {
+  display: inline-block;
+  vertical-align: top;
+}
 h1,
 h2 {
   font-size: 1rem;
@@ -236,6 +281,103 @@ h2 {
   height: 50px;
   background: #fff;
   animation: ripple-animation 2s;
+}
+.calendar {
+  margin-left: auto;
+  display: inline-block;
+  margin-right: auto;
+}
+.calendar h1 {
+  margin: 2.72rem auto 1.389rem auto;
+}
+.calendar .calendar__day-header {
+  border-radius: 0.2rem 0.2rem 0 0;
+  height: 6.056rem;
+  max-width: 15.56rem;
+  line-height: 6.056rem;
+  font-family: LatoLight;
+  font-size: 4.44rem;
+  color: #fff;
+  background: #e75735;
+}
+.calendar .calendar__content {
+  width: 15.56rem;
+  height: 17.84rem;
+  position: relative;
+}
+.calendar .calendar__content .clndr-controls {
+  display: inline-block;
+  background: #bf3e1f;
+  color: #fff;
+  font-family: LatoLight;
+  font-size: 1.33rem;
+  height: 2.36rem;
+  line-height: 2.36rem;
+}
+.calendar .calendar__content .clndr-controls .clndr-next-button,
+.calendar .calendar__content .clndr-controls .clndr-previous-button {
+  width: 2.22265rem;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.calendar .calendar__content .clndr-controls .month {
+  width: 11.11rem;
+}
+.calendar .calendar__content .clndr-grid {
+  width: 100%;
+  background: #e75735;
+  text-align: center;
+  display: inline-block;
+  margin: 0;
+}
+.calendar .calendar__content .clndr-grid .days-of-the-week {
+  height: 12.72rem;
+}
+.calendar .calendar__content .clndr-grid .days-of-the-week .header-day {
+  float: left;
+  background: #e75735;
+  height: 1.61rem;
+  width: 2.22265rem;
+  line-height: 1.61rem;
+  font-size: 0.5rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+.calendar .calendar__content .clndr-grid .days-of-the-week .day {
+  font-family: SourceSansProRegular;
+  font-size: 1.11rem;
+  float: left;
+  width: 2.22265rem;
+  height: 2.22265rem;
+  box-shadow: 0 0 0 1px #fff;
+  line-height: 2.22265rem;
+  color: #747474;
+  background: #f2f2f2;
+}
+.calendar .calendar__content .clndr-grid .days-of-the-week .adjacent-month,
+.calendar .calendar__content .clndr-grid .days-of-the-week .empty {
+  color: #fff;
+}
+.calendar .calendar__content .clndr-grid .days-of-the-week .day.today {
+  color: #fff;
+  background: #e75735;
+}
+.calendar .calendar__content .clndr-today-button {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: #747474;
+  padding-left: 1.05rem;
+  text-align: left;
+  background: #e5e5e5;
+  height: 2.72rem;
+  line-height: 2.72rem;
+  position: absolute;
+  top: 84.5%;
+  width: 14.51rem;
+  border-radius: 0 0 0.2rem 0.2rem;
+}
+.clndr-controls > div {
+  display: inline-block;
 }
 header {
   background: linear-gradient(to right, #e75735 50%, #4eb7a8 50%);
@@ -1177,7 +1319,7 @@ input[type=range]::-ms-tooltip {
   background-repeat: no-repeat;
 }
 .news h1 {
-  margin: 5.1rem auto 1.78rem auto;
+  margin: 3.1rem auto 1.78rem auto;
 }
 .news img {
   background-color: #fff;
@@ -1366,103 +1508,6 @@ input[type=range]::-ms-tooltip {
   text-transform: uppercase;
   word-spacing: 0.053rem;
   letter-spacing: 0.04rem;
-}
-.calendar {
-  margin-left: auto;
-  display: inline-block;
-  margin-right: 1.5rem;
-}
-.calendar h1 {
-  margin: 2.72rem auto 1.389rem auto;
-}
-.calendar .calendar__day-header {
-  border-radius: 0.2rem 0.2rem 0 0;
-  height: 6.056rem;
-  max-width: 15.56rem;
-  line-height: 6.056rem;
-  font-family: LatoLight;
-  font-size: 4.44rem;
-  color: #fff;
-  background: #e75735;
-}
-.calendar .calendar__content {
-  width: 15.56rem;
-  height: 17.84rem;
-  position: relative;
-}
-.calendar .calendar__content .clndr-controls {
-  display: inline-block;
-  background: #bf3e1f;
-  color: #fff;
-  font-family: LatoLight;
-  font-size: 1.33rem;
-  height: 2.36rem;
-  line-height: 2.36rem;
-}
-.calendar .calendar__content .clndr-controls .clndr-next-button,
-.calendar .calendar__content .clndr-controls .clndr-previous-button {
-  width: 2.22265rem;
-  font-weight: bold;
-  font-size: 1.4rem;
-}
-.calendar .calendar__content .clndr-controls .month {
-  width: 11.11rem;
-}
-.calendar .calendar__content .clndr-grid {
-  width: 100%;
-  background: #e75735;
-  text-align: center;
-  display: inline-block;
-  margin: 0;
-}
-.calendar .calendar__content .clndr-grid .days-of-the-week {
-  height: 12.72rem;
-}
-.calendar .calendar__content .clndr-grid .days-of-the-week .header-day {
-  float: left;
-  background: #e75735;
-  height: 1.61rem;
-  width: 2.22265rem;
-  line-height: 1.61rem;
-  font-size: 0.5rem;
-  color: #fff;
-  text-transform: uppercase;
-}
-.calendar .calendar__content .clndr-grid .days-of-the-week .day {
-  font-family: SourceSansProRegular;
-  font-size: 1.11rem;
-  float: left;
-  width: 2.22265rem;
-  height: 2.22265rem;
-  box-shadow: 0 0 0 1px #fff;
-  line-height: 2.22265rem;
-  color: #747474;
-  background: #f2f2f2;
-}
-.calendar .calendar__content .clndr-grid .days-of-the-week .adjacent-month,
-.calendar .calendar__content .clndr-grid .days-of-the-week .empty {
-  color: #fff;
-}
-.calendar .calendar__content .clndr-grid .days-of-the-week .day.today {
-  color: #fff;
-  background: #e75735;
-}
-.calendar .calendar__content .clndr-today-button {
-  text-transform: uppercase;
-  font-size: 0.72rem;
-  color: #747474;
-  padding-left: 1.05rem;
-  text-align: left;
-  background: #e5e5e5;
-  height: 2.72rem;
-  line-height: 2.72rem;
-  position: absolute;
-  top: 84.5%;
-  width: 14.51rem;
-  border-radius: 0 0 0.2rem 0.2rem;
-}
-.clndr-controls > div {
-  display: inline-block;
 }
 .messaging {
   display: inline-block;
@@ -1700,3 +1745,5 @@ input[type=range]::-ms-tooltip {
     opacity: 0;
   }
 }
+
+/*# sourceMappingURL=styles.css.map*/

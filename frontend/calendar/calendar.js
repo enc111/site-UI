@@ -1,7 +1,7 @@
 import * as $ from 'jquery'
 import 'moment'
 import 'lodash'
-
+import "clndr"
 $(document).ready(function() {
 
     $('.calendar__content').clndr({

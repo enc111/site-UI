@@ -66,12 +66,21 @@ background-icon(path, n = 60%)
   html
     width 100%
     font-size 25px
-
+  article
+    min-width 70%
+@media only screen and (min-width: 1280px) and (max-width: 1679px)
+  html
+    width 100%
+    font-size 23px
+  article
+    min-width 70%
 @media only screen and (min-width: 700px) and (max-width: 1279px)
   html
     width 100%
     font-size 18px
     background greenyellow
+  article
+    min-width 60%
 
 @media only screen and (min-width: 480px) and (max-width: 699px)
   html
@@ -143,8 +152,35 @@ body//  width 38.89rem//  heigth 187.22rem
   font-family LatoBlack
   & > div:last-of-type
     padding-bottom 6.056rem
+@media only screen and (min-width: 569px)
+  main
+    display flex
+    display flexbox//
+    display -webkit-box//
+    display -ms-flexbox
+    display -moz-box-flex//
+    display -webkit-flex//
+    -webkit-box-pack justify//
+    -moz-box-pack justify//
+    -webkit-justify-content space-between//
+    justify-content space-between
+    -ms-flex-pack justify
 
 
+aside
+  background lightcyan
+  margin-right 0
+  margin-left auto
+  flex-shrink 0
+  flex-grow 0
+  & > div
+    margin 2rem auto
+
+
+article,
+aside
+  display inline-block
+  vertical-align top
 
 h1,
 h2
@@ -169,6 +205,8 @@ h2
   to
     transform scale(2)
     opacity 0
+
+@import "calendar/calendar"
 @import "vendor/jquery.circlicful.css"
 @import "vendor/jquery.progressbar.css"
 @import "header/header"
@@ -184,7 +222,7 @@ h2
 @import "news/news"
 @import "events/events"
 @import "location/location"
-@import "calendar/calendar"
+
 @import "messaging/messaging"
 @import "video/video"
 

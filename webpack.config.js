@@ -16,6 +16,7 @@ module.exports = {
         },
 
         watch: true,
+        devtool: 'source-map',
 
         watchOptions: {
             aggregateTimeout: 100

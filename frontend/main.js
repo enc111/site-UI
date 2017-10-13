@@ -1,6 +1,8 @@
 'use strict'
 
 import * as $ from "jquery"
+import 'moment'
+import 'lodash'
 import './main.styl'
 import './percentages/multi-doughnut-chart.js'
 import  './vendor/jquery.circlicful.js'
@@ -10,5 +12,5 @@ import  './sliders/sliders.js'
 import  './vendor/jquery.progressbar.js'
 import './stages/stages.js'
 import './location/gmaps.js'
-import './calendar/calendar.js'
 import './vendor/clndr.js'
+import './calendar/calendar.js'
